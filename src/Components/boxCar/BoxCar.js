@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+
 
 // Apenas a div onde os carros ficam, na pagina /carros
 function BoxCar(params) {

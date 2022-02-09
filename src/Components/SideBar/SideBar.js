@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import JetCar from "../../img/JetCars.png";
 
 const SideBar = () => {
   return (

@@ -13,11 +13,11 @@ import carrosService from "../../Service/carroService/carrosService";
 
 class FormularioReservas extends Component {
   startState = {
-    usuario: "",
+    motorista: "",
     modelo: "",
-    kilometragem: "",
-    datareserva: "",
-    horareserva: "",
+    quilometragem: "",
+    data: "",
+    hora: "",
     status: "reservado",
     feed: "Status",
   };
