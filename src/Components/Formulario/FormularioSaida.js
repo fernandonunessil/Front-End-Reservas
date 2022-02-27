@@ -15,7 +15,7 @@ class FormularioSaida extends Component {
         motorista: '',
         quilometragem: '',
         status: 'em uso',
-        data  : '',
+        datasaida: '',
         hora: '',
     }
 
@@ -41,7 +41,7 @@ class FormularioSaida extends Component {
 
 
     render() {
-        const { motorista, datasaida, hora } = this.state;
+        const { motorista, quilometragem, datasaida, hora } = this.state;
         return (
             <>
             <div>
@@ -88,7 +88,7 @@ class FormularioSaida extends Component {
                     />
                   </div>
                 </div>
-                {/* <div>
+                <div>
                   <p>Quilometragem atual do veículo :</p>
                   <TextField
                     id="filled-basic"
@@ -99,7 +99,7 @@ class FormularioSaida extends Component {
                     onChange={this.handleChange}
                     sx={{ width: "100%" }}
                   />
-                </div> */}
+                </div>
                 <div className="p-7">
                   <Stack direction="row" spacing={0}>
                     <Button

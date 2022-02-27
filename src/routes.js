@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //Paginas
 import Home from "./Page/Home/Home";
 import Carros from "./Page/Veiculo/Veiculo";
+import DeskCarro from './Page/Veiculo/InfoVeiculo';
 import Reservas from './Page/Reservas/Reservas';
 
 const Rotas = () => {

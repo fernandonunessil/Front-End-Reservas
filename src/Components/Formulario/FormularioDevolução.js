@@ -13,8 +13,8 @@ class FormularioDevolução extends Component {
   initialState = {
     modelo: "",
     motorista: "",
-    data: "",
-    hora: "",
+    entregaData: "",
+    horaEntrega: "",
     quilometragem: "",
     status:'livre'
   };
@@ -43,7 +43,7 @@ class FormularioDevolução extends Component {
   };
 
   render() {
-    const { motorista, data, hora, quilometragem } = this.state;
+    const { motorista, entregaData, horaEntrega, quilometragem } = this.state;
     return (
       <>
         <div>
@@ -70,7 +70,7 @@ class FormularioDevolução extends Component {
                 <p>Data da entrega</p>
                 <InputMask
                   mask="99/99/9999"
-                  value={data}
+                  value={entregaData}
                   disable={false}
                   maskChar=""
                   onChange={this.handleChange}
@@ -81,7 +81,7 @@ class FormularioDevolução extends Component {
                       label="Data da Entrega"
                       variant="filled"
                       name="entregaData"
-                      value={hora}
+                      value={entregaData}
                       onChange={this.handleChange}
                       sx={{ width: "100%" }}
                     />
@@ -92,7 +92,7 @@ class FormularioDevolução extends Component {
                 <p>Hora da entrega</p>
                 <InputMask
                   mask="99:99"
-                  value={hora}
+                  value={horaEntrega}
                   disable={false}
                   maskChar=""
                   onChange={this.handleChange}
@@ -103,7 +103,7 @@ class FormularioDevolução extends Component {
                       label="Hora da Entrega"
                       variant="filled"
                       name="horaEntrega"
-                      value={hora}
+                      value={horaEntrega}
                       onChange={this.handleChange}
                       sx={{ width: "100%" }}
                     />

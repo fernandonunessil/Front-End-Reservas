@@ -54,7 +54,6 @@ function Carros() {
 
   useEffect(() => {
     setContent(viewCars());
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [carros.length]);
 
   return (
