@@ -5,6 +5,10 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import InputMask from "react-input-mask";
 
+// Components
+
+import InputDate from "../inputDate/InputDate";
+
 import AutoCompleta from "../AutoComplete/AutocompleteReserva";
 
 //Service imports
@@ -24,7 +28,8 @@ class FormularioReservas extends Component {
 
   state = this.startState;
 
-  handleChage = (event) => {
+  handleChange = (event) => {
+    console.log('change');
     const { name, value } = event.target;
     this.setState({
       [name]: value,
@@ -72,18 +77,19 @@ class FormularioReservas extends Component {
                   label="Nome do Usuario"
                   name="usuario"
                   value={usuario}
-                  onChange={this.handleChage}
+                  onChange={this.handleChange}
                 />
               </div>
             </div>
-            <div className="flex gap-8 mb-10">
+            <div className="flex gap-8 mb-10 justify-between">
               <div>
                 <p className="p-1">Data da reserva</p>
-                <InputMask
+                {/* <InputMask
                   mask="99/99/9999"
                   value={datareserva}
                   disable={false}
                   maskChar=""
+                  type='date'
                   onChange={this.handleChage}
                 >
                   {() => (
@@ -92,12 +98,14 @@ class FormularioReservas extends Component {
                       variant="filled"
                       label="Data da Reserva"
                       name="datareserva"
+                      type='data'
                       value={datareserva}
                       onChange={this.handleChage}
                       sx={{ width: "100%" }}
                     />
                   )}
-                </InputMask>
+                </InputMask> */}
+                <InputDate handleChange={this.handleChange} name='datareserva' value={datareserva}/>
               </div>
               <div>
                 <p className="p-1">Hora da Reserva</p>
@@ -106,7 +114,7 @@ class FormularioReservas extends Component {
                   value={horareserva}
                   disable={false}
                   maskChar=""
-                  onChange={this.handleChage}
+                  onChange={this.handleChange}
                 >
                   {() => (
                     <TextField
@@ -115,7 +123,7 @@ class FormularioReservas extends Component {
                       label="Hora da Reserva"
                       name="horareserva"
                       value={horareserva}
-                      onChange={this.handleChage}
+                      onChange={this.handleChange}
                       sx={{ width: "100%" }}
                     />
                   )}

@@ -20,6 +20,13 @@ class Formulario extends Component {
 
   state = this.initialState
 
+  upperText = () => {
+    const {placa} = this.state;
+    this.state({
+      placa: placa.toUpperCase()
+    })
+  }
+
   handleChange = (event) => {
     const {name, value} = event.target
     this.setState({
@@ -43,7 +50,7 @@ class Formulario extends Component {
           <div className="flex gap-8 mb-8">
             <div>
               <p className="p-1 mb-2">Placa do Veículo</p>
-              <TextField id="filled-basic" variant="filled" label='Placa do Veículo' value={placa} name='placa' onChange={this.handleChange}/>
+              <TextField id="filled-basic" variant="filled" label='Placa do Veículo' value={placa.toUpperCase()} name='placa' onChange={this.handleChange}/>
             </div>
             <div>
               <p className="p-1 mb-2">Ano do Veículo</p>
